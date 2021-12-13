@@ -13,7 +13,7 @@ _gcfg = {
     "https": False,  # enable https url
     "china": False,  # in case china cloudfront
     "threads": 32,  # how many threads 
-    "timeout": (10,3),  # url connection timeout
+    "timeout": (2,2),  # url connection timeout
     "origin": "",   # origin domain(optional)
     "cname" : os.environ.get('alt_cname'),    # the alternative cname
     "action": "GET" # the http action
@@ -41,6 +41,7 @@ def cf_pops_url_warmup(url):
             print("warning: %s refreshing failing, ignore!!!"%url)
         else:
             print("SUCCESS: %s warmup done!"%url)
+            print("headers: %s" % r.headers.get('X-Cache','header no fund'))
     except Exception as e:
         print("error: %s %s"%(str(e), url)) # didn't care the output
     return None
