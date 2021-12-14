@@ -25,5 +25,15 @@
 curl -H "host:vod.ensean.space" http://d3wov59arknox.ams50-c1.cloudfront.net/mp4/What-is-AWS.mp4 -v -o /dev/null
 ```
 
+4. PoPs
+
+    * https://www.feitsui.com/en/article/3
+
+```shell
+United Arab Emirates:   DXB50-C1,FJR50-C1
+BAH53-C1:               BAH53-C1
+Israel:                 TLV50-C2
+```
+
 ## Reference
 [nwcd-samples cloudfront warmup](https://github.com/nwcd-samples/cloudfront-prewarm/)
