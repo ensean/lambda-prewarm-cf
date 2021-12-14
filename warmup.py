@@ -2,18 +2,19 @@
 # -*- coding: utf-8 -*-
 import os
 import urllib.parse
+import json
 import requests
 
 _gcfg = {
     "pops": {
-        "global": ['AMS1-C1', 'AMS50-C1', 'AMS54-C1', 'DXB50-C1', 'FJR50-C1'],  # in case you find new edge-pop code
+        "global": ['TLV50-C2','BAH53-C1','DXB50-C1', 'FJR50-C1','FRA2-C1','FRA2-C2','FRA6-C1','FRA50-C1','FRA56-C2','FRA56-P4','FRA60-P1','FRA60-P3'],  # in case you find new edge-pop code
         "china": ['BJS9-E1', 'PVG52-E1', 'SZX51-E1', 'ZHY50-E1']  # the sources of edge-pop code for china
      },
     "http": True,   # enable http url
     "https": False,  # enable https url
     "china": False,  # in case china cloudfront
     "threads": 32,  # how many threads 
-    "timeout": (2,2),  # url connection timeout
+    "timeout": (3,3),  # url connection timeout
     "origin": "",   # origin domain(optional)
     "cname" : os.environ.get('alt_cname'),    # the alternative cname
     "action": "GET" # the http action
